@@ -22,7 +22,7 @@ jobs:
           # pip install -r requirements.txt
 
       - name: Ensure chromedriver permissions
-        run: chmod +x /usr/bin/chromedriver
+        run: sudo chmod +x /usr/bin/chromedriver
 
       - name: Run Selenium script
         run: |
