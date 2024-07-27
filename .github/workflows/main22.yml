@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.10]
-        testi: [1.1, 27, 278, 2v, 9e, 93h, os, yys]
+        testi: [1.1, 27, 27v,ui,7g, ue ,iu,gi,fu,kig,rf,hi,jii,fu,2v, 9e, 93h, os, yys]
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
