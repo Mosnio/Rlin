@@ -25,4 +25,4 @@ jobs:
     - name: TESTING
       run: |
         pip3 install selenium
-        python test1.py
+        python rl1.py
