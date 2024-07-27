@@ -29,7 +29,7 @@ selc = random.choice(select)
 # Print the selected URL
 print(selc)
 
-driver.get(selc)
+driver.get('https://rglinks.com/URj0')
 
 # Wait for 30 seconds
 time.sleep(30)
