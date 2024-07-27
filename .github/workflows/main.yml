@@ -14,7 +14,7 @@ jobs:
 
     services:
       xvfb:
-        image: cirrusci/xvfb:latest
+        image: xvfb/xvfb
         options: --privileged
         ports:
           - 6000:6000
@@ -28,7 +28,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # Specify the required Python version
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -46,6 +46,6 @@ jobs:
         sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
     - name: Run Selenium tests
-      run: wget https://github.com/Mosnio/Rlin/raw/main/rl.py && python rl.py  # Replace with the path to your Selenium script
+      run: wget https://github.com/Mosnio/Rlin/raw/main/rl.py && python rl.py 
       env:
-        DISPLAY: ":99"  # Use the virtual display
+        DISPLAY: ":99"
