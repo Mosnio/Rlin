@@ -73,6 +73,6 @@ button4 = WebDriverWait(driver, 10).until(
 )
 button4.click()
 print('4clicked')
-time.sleep(2)
+time.sleep(20)
 driver.switch_to.window(driver.window_handles[0])
 time.sleep(30)
