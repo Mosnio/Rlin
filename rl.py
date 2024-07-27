@@ -46,7 +46,7 @@ driver.switch_to.window(driver.window_handles[0])
 time.sleep(30)
 
 # Click on the second button
-button2 = WebDriverWait(driver, 30).until(
+button2 = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((By.ID, "cross-snp2"))
 )
 button2.click()
@@ -57,7 +57,7 @@ time.sleep(30)
 driver.switch_to.window(driver.window_handles[0])
 
 # Click on the third button
-button3 = WebDriverWait(driver, 30).until(
+button3 = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((By.ID, "tp-snp2"))
 )
 button3.click()
