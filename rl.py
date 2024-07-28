@@ -4,7 +4,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import random
-
 # Create a new instance of the Chrome driver
 driver = webdriver.Chrome()
 
