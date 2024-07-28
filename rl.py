@@ -7,6 +7,7 @@ import random
 # Create a new instance of the Chrome driver
 driver = webdriver.Chrome()
 
+
 # Define the list of URLs
 select = [
     "https://rglinks.com/AaWUI",
