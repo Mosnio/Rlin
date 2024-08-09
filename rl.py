@@ -1,35 +1,23 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-import random
+
+# Proxy details
+
+proxy = "http://Q0QcQarNb10aX315aoQESSDkVRJO0I:t62JJnQ4sNHoqIQA@residential.flashproxy.io:8082"
+
+# Set up Chrome options with proxy
+chrome_options = Options()
+chrome_options.add_argument(f'--proxy-server={proxy}')
+
 # Create a new instance of the Chrome driver
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=chrome_options)
 
-
-# Define the list of URLs
-select = [
-    "https://rglinks.com/AaWUI",
-    "https://rglinks.com/5a93",
-    "https://rglinks.com/deAR6nr0",
-    "https://rglinks.com/v8x7N6",
-    "https://rglinks.com/m56n",
-    "https://rglinks.com/9JGGbtl",
-    "https://rglinks.com/my6A7fy",
-    "https://rglinks.com/GmFr",
-    "https://rglinks.com/fctF",
-    "https://rglinks.com/VxZq5",
-    "https://rglinks.com/WggwT"
-]
-
-# Randomly select a URL from the list
-selc = random.choice(select)
-
-# Print the selected URL
-print(selc)
-
-driver.get('https://rglinks.com/b5tF') #('https://rglinks.com/URj0')
+driver.get('https://rglinks.com/b5tF')  # Change URL if needed
 
 # Wait for 30 seconds
 time.sleep(30)
@@ -51,6 +39,7 @@ button2 = WebDriverWait(driver, 60).until(
 )
 button2.click()
 print('2clicked')
+
 # Wait for 30 seconds
 time.sleep(30)
 
@@ -62,6 +51,7 @@ button3 = WebDriverWait(driver, 60).until(
 )
 button3.click()
 print('3clicked')
+
 # Wait for 30 seconds
 time.sleep(30)
 
